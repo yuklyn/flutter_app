@@ -5,7 +5,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.1'
     }
 }
 
@@ -13,6 +13,14 @@ allprojects {
     repositories {
         google()
         jcenter()
+        // 阿里百川仓库地址，包含了阿里巴巴集团通用的基础 SDK
+        maven {
+            url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
+        }
+        // 阿里云仓库地址，包括了 IOT 事业部开发的 SDK
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/releases/"
+        }
     }
 }
 
